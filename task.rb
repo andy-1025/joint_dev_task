@@ -150,10 +150,10 @@ end
 
 class UserQ17
   # 以下に回答を記載
-    def initialize(params)
-      @name = params[:name]
-      @age = params[:age]
-      @gender = params[:gender]
+    def initialize(name: ,age: ,gender:)
+      @name = name
+      @age = age
+      @gender = gender
     end
 
     def info
@@ -177,9 +177,9 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  def initialize(params)
-    @name = params[:name]
-    @age = params[:age]
+  def initialize(name: ,age:)
+    @name = name
+    @age = age
   end
 
   def introduce
@@ -204,8 +204,8 @@ class Item
   # 以下を修正して下さい
   attr_reader :name
 
-  def  initialize(params)
-    @name = params[:name]
+  def  initialize(name:)
+    @name = name
   end
 end
 
@@ -218,18 +218,19 @@ end
 class UserQ20
   # 以下に回答を記載
     attr_reader :name ,:age
-  def initialize(params)
-    @name= params[:name]
-    @age = params[:age]
+    
+  def initialize(name: ,age:)
+    @name= name
+    @age = age
   end
 
 end
 
 class Zoo
   # 以下に回答を記載
-  def initialize(params)
-    @entry_fee = params[:entry_fee]
-    @name = params[:name]
+  def initialize(entry_fee: ,name:)
+    @entry_fee = entry_fee
+    @name = name
   end
 
   def info_entry_fee(user)
